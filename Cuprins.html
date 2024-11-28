@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuprins Catalog</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            text-align: left;
+        }
+
+        .mySlides {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: auto;
+        }
+
+        .mySlides img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 10px 10px 0;
+            float: left;
+        }
+
+        .text {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            color: white;
+            font-size: 24px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+        }
+
+        .cover-image {
+            width: 80%;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body class="w3-light-grey">
+
+    <header class="w3-container w3-teal w3-center">
+        <h1>Catalogul Colegilor de Grupă</h1>
+    </header>
+
+    <section class="w3-content w3-padding-32">
+        <div class="w3-card w3-margin w3-white">
+            <img src="coperta.jpg" alt="Copertă catalog" class="cover-image">
+
+            <div class="w3-container w3-center">
+                <h2 class="w3-text-teal">Profiluri Colegi</h2>
+                
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <a href="Cristian.html">
+                            <img src="andrei.jpg" alt="Cristian">
+                            <div class="text">Cristian</div>
+                        </a>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <a href="Silviu.html">
+                            <img src="silviu.jpg" alt="Silviu">
+                            <div class="text">Silviu</div>
+                        </a>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <a href="Fabian.html">
+                            <img src="fabian.jpg" alt="Fabian">
+                            <div class="text">Fabian</div>
+                        </a>
+                    </div>
+                </div>
+
+                <ul class="w3-ul w3-hoverable">
+                    <li><a href="Cristian.html" class="w3-button w3-block w3-teal">Profil - Cristian</a></li>
+                    <li><a href="Silviu.html" class="w3-button w3-block w3-teal">Profil - Silviu</a></li>
+                    <li><a href="Fabian.html" class="w3-button w3-block w3-teal">Profil - Fabian</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 3000);
+        }
+
+        showSlides();
+    </script>
+
+</body>
+</html>
